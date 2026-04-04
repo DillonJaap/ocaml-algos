@@ -1,5 +1,3 @@
-open Core
-
 let insertion_sort array =
   (* Iterate through each element starting from the second element *)
   for j = 1 to Array.length array - 1 do
@@ -23,5 +21,6 @@ let insertion_sort array =
 let () =
   let arr = [| 50; 2; 6; 9; 20; 2; 3; 4; 12; 10 |] in
   insertion_sort arr;
-  print_s [%sexp (arr : int array)]
+
+  Format.printf "\n%a\n" Pp.int_array arr
 ;;
