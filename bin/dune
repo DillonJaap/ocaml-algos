@@ -1,0 +1,6 @@
+(executable
+ (public_name algos)
+ (name main)
+ (libraries algos core)
+ (preprocess
+  (pps ppx_jane)))
